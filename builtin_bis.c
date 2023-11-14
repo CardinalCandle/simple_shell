@@ -29,7 +29,8 @@ int unset_alias(info_t *info, char *str)
 		return (1);
 	c = *p;
 	*p = 0;
-	res = delete_node_at_index(&(info->alias), get_node_index(info->alias, node_starts_with(info->alias, str, -1)));
+	res = delete_node_at_index(&(info->alias),
+		get_node_index(info->alias, node_starts_with(info->alias, str, -1)));
 	*p = c;
 	return (res);
 }
@@ -83,7 +84,7 @@ int print_alias(list_t *node)
  */
 int _myalias(info_t *info)
 {
-	int a:
+	int a;
 	char *p = NULL;
 	list_t *node = NULL;
 
